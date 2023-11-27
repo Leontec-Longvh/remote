@@ -22,7 +22,7 @@ const Login = props => {
       history('/dashboard');
     }).catch(error => {
       setLoading(false);
-      if (error.response.status === 401) setError(error.response.data.message);
+      if (error.response.status === 401) setError("You are not authorized to access this application");
       else setError("Something went wrong. Please try again later.");
     });
   }
