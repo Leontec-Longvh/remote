@@ -31,7 +31,8 @@ jobs:
       - name: Install
         run: |
           npm install
-          # npm install eslint
+          npm install eslint@latest
+          npx update-browserslist-db@latest
           npm install @microsoft/eslint-formatter-sarif@2.1.7
 
       - name: Run ESLint
