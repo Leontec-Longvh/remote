@@ -28,9 +28,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install ESLint
+      - name: Install
         run: |
-          npm install eslint
+          npm install
+          # npm install eslint
           npm install @microsoft/eslint-formatter-sarif@2.1.7
 
       - name: Run ESLint
@@ -41,7 +42,7 @@ jobs:
           --output-file eslint-results.sarif
         continue-on-error: true
 
-      - name: Run ESLint
+      - name: Run Build
         run: npx run build
         continue-on-error: true
   
