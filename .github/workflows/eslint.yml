@@ -28,9 +28,8 @@ jobs:
 
       - name: Install
         run: |
-          npm install
+          npm install --save-dev @babel/plugin-proposal-private-property-in-object
           npm install eslint@8.57.0
-          npx update-browserslist-db@latest
           npm update
           npm install @microsoft/eslint-formatter-sarif@2.1.7
 
