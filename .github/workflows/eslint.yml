@@ -31,8 +31,8 @@ jobs:
           npm install
           npm install eslint@8.57.0
           npx update-browserslist-db@latest
+          npm update
           npm install @microsoft/eslint-formatter-sarif@2.1.7
-          npm audit fix --force
 
       - name: Run ESLint
         run: npx eslint ./src
